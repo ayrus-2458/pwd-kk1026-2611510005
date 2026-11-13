@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ini Judul Halaman</title>
+    <title>Ini Judul Halaman bossku!</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <header>
-      <h1>Ini Header 1</h1>
+      <h1>Akses 3 Halaman saya :</h1>
       <nav>
         <ul>
           <li><a href="#home">Beranda</a></li>
@@ -19,16 +21,19 @@
 
     <main>
       <section id="home">
-        <h2>Selamat Datang</h2>
-        <p>Lorem ipsum dolor sit amet.</p>
-        <img src="img/foto-profil.jpg" alt="Foto Profil saya" />
+        <h2>Selamat Datang boskuu!</h2>
+        <p>Halaman Beranda saya</p>
+        <img src="img/foto-saya.jpg" alt="Foto Profil saya" />
       </section>
 
       <section id="about">
         <h2>Tentang Saya</h2>
         <article>
           <h3>Profil Singkat</h3>
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>
+            Saya adalah Muhammad Surya Nugraha Riyadi <br />Mahasiswa ISB Atma
+            Luhur Pangkalpinang <br />Prodi Teknik Informatika 2026
+          </p>
 
           <h3>Target Belajar saya</h3>
           <ol>
@@ -43,10 +48,11 @@
         <h2>Kontak</h2>
         <p>
           Kunjungi
-          <a href="https://github.com/ayrus-2458">profil github saya</a>.
+          <a href="https://github.com/ayrus-2458">Profil github saya</a>.
         </p>
 
-        <form action="index.html" method="get">
+        <form action="index.html" method="post">
+          <!-- Menambahkan Form Nama berbentuk Teks -->
           <div class="form-group">
             <label for="nama">Nama Lengkap</label><br />
             <input
@@ -60,6 +66,8 @@
               required
             />
           </div>
+
+          <!-- Menambahkan Form Email -->
           <div class="form-group">
             <label for="email">Email</label><br />
             <input
@@ -71,6 +79,8 @@
               required
             />
           </div>
+
+          <!-- Menambahkan Form Semester berjenis Number-->
           <div class="form-group">
             <label for="semester">Semester</label><br />
             <input
@@ -83,6 +93,8 @@
               required
             />
           </div>
+
+          <!-- Menambahkan Form Tanggal berjenis Date -->
           <div class="form-group">
             <label for="tanggal">Tanggal Kunjungan</label><br />
             <input
@@ -93,6 +105,8 @@
               required
             />
           </div>
+
+          <!-- Menambahkan Form Jenis Pesan berjenis Radio -->
           <div class="form-group">
             <p>Jenis Pesan</p>
             <input
@@ -103,9 +117,18 @@
               required
             />
             <label for="pertanyaan">Pertanyaan</label>
-            <input type="radio" id="saran" name="jenis_pesan" value="saran" />
+
+            <input
+              type="radio"
+              id="saran"
+              name="jenis_pesan"
+              value="saran"
+              required
+            />
             <label for="saran">Saran</label>
           </div>
+
+          <!-- Menambahkan Form Topik berjenis Checkbox -->
           <div class="form-group">
             <p>Topik yang Diminati</p>
             <input type="checkbox" id="minat-html" name="minat" value="HTML" />
@@ -113,14 +136,20 @@
             <input type="checkbox" id="minat-css" name="minat" value="CSS" />
             <label for="minat-css">CSS</label>
           </div>
+
+          <!-- Menambahkan form Prodi berjenis Select Option -->
           <div class="form-group">
             <label for="prodi">Program Studi</label><br />
             <select class="input-form" id="prodi" name="prodi" required>
-              <option value="">-- Pilih Program Studi --</option>
+              <option value="" disabled selected>
+                -- Pilih Program Studi --
+              </option>
               <option value="SI">Sistem Informasi</option>
               <option value="TI">Teknik Informatika</option>
             </select>
           </div>
+
+          <!-- Menambahkan form Pesan berjenis Text Area -->
           <div class="form-group">
             <label for="pesan">Pesan</label><br />
             <textarea
@@ -132,6 +161,8 @@
               required
             ></textarea>
           </div>
+
+          <!-- Tombol Submit dan Reset -->
           <button type="submit">Kirim</button>
           <button type="reset">Batal</button>
         </form>
@@ -139,7 +170,14 @@
     </main>
 
     <footer>
-      <p>&copy; 2026. Muhammmad Surya Nugraha Riyadi - 26115100005</p>
+      <p>&copy; 2026. Muhammad Surya Nugraha Riyadi - 2611510005</p>
     </footer>
+
+    <!-- Menghapus Cache Browser setiap kali Refresh Page -->
+    <script>
+      window.addEventListener("pageshow", function () {
+        document.getElementById("prodi").selectedIndex = 0;
+      });
+    </script>
   </body>
 </html>
