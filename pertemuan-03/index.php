@@ -10,7 +10,34 @@ null = tanpa isi (ketiadaan)
 "teks" = tipe data string
 3.14 = tipe data desimal
 */
-sparas = TRUE;
+$paras = false;
+$semester = 1;
+
+switch ($semester) {
+  case 1:
+    $semesterku = "ku baru mulai belajar jok";
+    $pacarku = "Fiola";
+    break;
+  case 2:
+    $semesterku = "ku lah mulai agak biasa jok";
+    $pacarku = "naura";
+    break;
+  case 3:
+    $semesterku = "ku lah mulai nakal jok";
+    $pacarku = "zaskia";
+    break;
+  case 4:
+    $semesterku = "ku lah mulai nyesel jok";
+    $pacarku = "nadila";
+    break;
+  case 5:
+    $semesterku = "ku lah mulai mengejar nilai jok";
+    $pacarku = "viola";
+    break;
+  default:
+    $semesterku = "lah kofang jok";
+    break;
+}
 ?>
 
 
@@ -66,6 +93,12 @@ sparas = TRUE;
       <article>
         <h3>Profil Singkat</h3>
         <p>Saya mahasiswa Program Studi Sistem Informasi.</p>
+        <?php
+        if ($paras):
+          echo "<p>saya berwajah tampan (calon perwira).</p>";
+        endif;
+        ?>
+        <p>semester <?php echo $semester ?> (<?= $semesterku ?>). pacarku <?= $pacarku ?></p>
 
         <h3>Target Belajar</h3>
 
