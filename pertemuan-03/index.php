@@ -11,7 +11,7 @@ null = tanpa isi (ketiadaan)
 3.14 = tipe data desimal
 */
 $paras = false;
-$semester = 1;
+$semester = "1";
 
 switch ($semester) {
   case 1:
@@ -38,6 +38,9 @@ switch ($semester) {
     $semesterku = "lah kofang jok";
     break;
 }
+for ($i = 1; $i <= 5; $i++):
+  echo $i . "<br>";
+endfor;
 ?>
 
 
