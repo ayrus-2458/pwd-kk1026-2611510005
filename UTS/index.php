@@ -107,6 +107,7 @@ switch ($programStudi) {
 				<li><a href="#home">Beranda</a></li>
 				<li><a href="#about">Tentang</a></li>
 				<li><a href="#contact">Kontak</a></li>
+				<li><a href="#seminar">pendaftaran seminar</a></li>
 			</ul>
 		</nav>
 	</header>
@@ -277,6 +278,93 @@ switch ($programStudi) {
 					<p><strong>Pesan:</strong> <?= nl2br(htmlspecialchars($_SESSION["pesan"] ?? "", ENT_QUOTES, "UTF-8")) ?></p>
 				</article>
 			<?php endif; ?>
+
+			<form action="" method="POST">
+
+				<label for="nama">Nama Peserta</label>
+				<input
+					type="text"
+					id="nama"
+					name="nama"
+					required>
+
+				<label for="nim">NIM</label>
+				<input
+					type="text"
+					id="nim"
+					name="nim"
+					required>
+
+				<label for="prodi">Program Studi</label>
+				<select id="prodi" name="prodi" required>
+					<option value="">Pilih Program Studi</option>
+					<option value="Teknik Informatika">
+						Teknik Informatika
+					</option>
+					<option value="Sistem Informasi">
+						Sistem Informasi
+					</option>
+				</select>
+
+				<label for="seminar">Pilihan Seminar</label>
+				<select id="seminar" name="seminar" required>
+					<option value="">Pilih Seminar</option>
+					<option value="Artificial Intelligence">
+						Artificial Intelligence
+					</option>
+					<option value="Web Development">
+						Web Development
+					</option>
+					<option value="Cyber Security">
+						Cyber Security
+					</option>
+					<option value="Data Analytics">
+						Data Analytics
+					</option>
+				</select>
+
+				<label for="alasan">
+					Alasan Mengikuti Seminar
+				</label>
+				<textarea
+					id="alasan"
+					name="alasan"
+					required></textarea>
+
+				<button type="submit" name="kirim">
+					Kirim
+				</button>
+
+				<button type="reset">
+					Batal
+				</button>
+
+			</form>
+
+			<label for="seminar">Pilihan Seminar</label>
+
+			<select id="seminar" name="seminar" required>
+
+				<option value="">-- Pilih Seminar --</option>
+
+				<option value="Artificial Intelligence">
+					Artificial Intelligence
+				</option>
+
+				<option value="Web Development">
+					Web Development
+				</option>
+
+				<option value="Cyber Security">
+					Cyber Security
+				</option>
+
+				<option value="Data Analytics">
+					Data Analytics
+				</option>
+
+			</select>
+
 		</section>
 	</main>
 
